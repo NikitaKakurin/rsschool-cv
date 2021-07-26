@@ -1,2 +1,1 @@
-# rsschool-cv
-Markdown and Git
+https://github.com/NikitaKakurin/rsschool-cv
