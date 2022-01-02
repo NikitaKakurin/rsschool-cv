@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Roboto";
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+   }
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    margin: 0;
+    font-size: 3rem;
+    color: aliceblue;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    background: linear-gradient(rgba(3, 56, 244, .71), rgba(224, 37, 206, .79));
+    min-height: 100vh;
+}
+.menu__nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__list{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap: nowrap;
+    gap: 2rem;
+    width: 80%;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+}
+
+.menu__link{
+    position: relative;
+    color :aliceblue;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+.menu__link::after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -3px;
+    left: 0;
+    width: 10px;
+    height: 2px;
+    background-color: aliceblue;
+    transition: all .4s;
+}
+
+.menu__link:hover::after{
+    width: 100%;
+}
+
+.aside {
+    margin-left: 14px;
+    margin-right: 6px;
+    padding : 10px 14px;
+    width: 45%;
+    min-height: 100vh;
+    background-color: rgba(196, 196, 196, .3);
+    border-radius: 10px;
+}
+
+.logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo__img{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.logo__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    align-self: center;
+    font-family: Montserrat, monospace;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.logo__specialty{
+    font-size: 1.25em;
+    margin: 0;
+    color: #cecaca;
+}
