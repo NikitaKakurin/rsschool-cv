@@ -14,27 +14,40 @@
     html{
         font-size: 16px;
     }
+
     .menu__list{
         position: absolute;
+        left: 0;
+        top: 50px;
         display: none;
         flex-direction: column;
         text-align: center;
         width: 100%;
         background: rgba(3, 56, 244, .9);
         column-gap: 5px;
+        z-index: 5;
+        gap: 1rem
     }
 
+    .menu__link{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+    }
     .burger-container{
         display: block;
         z-index: 10;
     }
+
     #toggle-menu:checked~ .menu-button > span{
         transform: rotate(45deg);
     }
+
     #toggle-menu:checked~ .menu-button > span::before{
         top:0;
         transform: rotate(0);
     }
+    
     #toggle-menu:checked~ .menu-button > span::after{
         top:0;
         transform: rotate(90deg);
