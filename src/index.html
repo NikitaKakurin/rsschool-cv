@@ -63,9 +63,9 @@
               <address class = "contacts">
                 <ul class = "contacts__list">
                   <li class = "contacts__item"><img src="./assets/svg/cottage_white_24dp.svg" alt="address">  Voronezh, Russia;</li>
-                  <li class = "contacts__item"><img src="./assets/svg/call_white_24dp.svg" alt="call"> <a href="tel:+79515614387">+7(951)-561-43-87;</a></li>
-                  <li class = "contacts__item"><img src="./assets/svg/email_white_24dp.svg" alt="email"> <a href="mailto:KakurinN.V@yandex.ru">KakurinN.V@yandex.ru;</a></li>
-                  <li class = "contacts__item contacts__item-white"><img src="assets/svg/github-brands.svg" alt = "github" width="24"> <a href="https://github.com/NikitaKakurin">NikitaKakurin;</a></li>
+                  <li class = "contacts__item"><img src="./assets/svg/call_white_24dp.svg" alt="call"> <a class="contacts__link" href="tel:+79515614387">+7(951)-561-43-87;</a></li>
+                  <li class = "contacts__item"><img src="./assets/svg/email_white_24dp.svg" alt="email"> <a class="contacts__link" href="mailto:KakurinN.V@yandex.ru">KakurinN.V@yandex.ru;</a></li>
+                  <li class = "contacts__item contacts__item-white"><img src="assets/svg/github-brands.svg" alt = "github" width="24"> <a class="contacts__link" href="https://github.com/NikitaKakurin">NikitaKakurin;</a></li>
                 </ul>
               </address> 
             </section>
@@ -249,7 +249,7 @@ function squareDidgits(num){
                                 fill ="transparent" stroke="#f2f3f4" stroke-width="5"></circle>
   
                             <circle class = "donut-segment" cx="25" cy="25" r="20" 
-                                fill ="transparent" stroke="#3B5999" stroke-width="5" stroke-dasharray = "50 50" stroke-dashoffset = "6"></circle>
+                                fill ="transparent" stroke="#3B5999" stroke-width="5" stroke-dasharray = "40 60" stroke-dashoffset = "6"></circle>
                             <g class = "svg-text">
                                <text x=50% y=50% class ="svg-text__python" >Python</text>
                             </g>
@@ -263,8 +263,17 @@ function squareDidgits(num){
               </div>
         </div>
     </main>
-    <footer>
-        
+    <footer class ="footer">
+      <div class="footer-container">
+        <address class="address-footer">
+          <p>Author: Kakurin Nikita  <a href="https://github.com/NikitaKakurin"><img class="git-logo" src="./assets/git-logo.png" alt="git-logo" width="50" ></a></p>
+          <time datetime="2021-07-26">03.01.2022г.</time>
+        </address>
+        <div class="rsschool-container">
+          <a  href="https://rs.school/js/"><img class="rsschool-logo" src="./assets/rs_school_js.png" alt="rsschool-logo" width="100"> </a>
+        </div>
+      </div>
+      <p class="copyrating">&#169; CV Kakurin Nikita, 2021</p>
     </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>

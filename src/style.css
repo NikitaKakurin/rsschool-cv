@@ -67,7 +67,7 @@ h3{
     padding: 20px;
     list-style: none;
 }
-
+.contacts__link,
 .example__link,
 .menu__link{
     position: relative;
@@ -85,6 +85,7 @@ h3{
     font-family: monserrat,monospace;
     color : #353535
 }
+.contacts__link::after,
 .example__link::after,
 .menu__link::after{
     content: "";
@@ -96,7 +97,7 @@ h3{
     height: 2px;
     transition: all .4s;
 }
-
+.contacts__link:after,
 .menu__link::after{
     background-color: aliceblue;
 }
@@ -105,7 +106,7 @@ h3{
     background-color: #000000;
     width: 2rem;
 }
-
+.contacts__link:hover::after,
 .example__link:hover::after,
 .menu__link:hover::after{
     width: 100%;
@@ -116,12 +117,12 @@ h3{
     margin-right: 6px;
     padding : 10px 14px;
     min-width: 40%;
-    min-height: 100vh;
+    min-height: 100%;
     background-color: rgba(196, 196, 196, .3);
     border-radius: 15px;
     font-size: 1.25rem;
     color: aliceblue;
-
+    margin-bottom: 10px;
 }
 
 .logo{
@@ -282,4 +283,17 @@ h3{
     text-align: center;
 }
 
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+}
+
+.copyrating{
+text-align: center;
+margin: 0;
+}
 
