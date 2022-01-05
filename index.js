@@ -7,7 +7,6 @@ const burger = document.querySelector(".burger-container")
 
 
 function menuToDisplay(e){
-    console.log("work");
     if(checkbox.checked){
         showMenu();
     }else{
