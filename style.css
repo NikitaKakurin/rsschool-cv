@@ -78,6 +78,14 @@ h3{
     letter-spacing: 0px;
     text-align: left;
 }
+
+.menu__link{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
 .example__link{
     font-family: monserrat,monospace;
     color : #353535
@@ -295,11 +303,14 @@ h3{
 text-align: center;
 margin: 0;
 }
-
-
-
+.menu{
+    position: relative;
+}
 .burger-container{
     display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     background: rgba(3, 56, 244, .71);
 }
@@ -311,7 +322,7 @@ margin: 0;
     height: 50px;
 }
 
-.menu-button{
+.burger-menu__button{
     display: flex;
     text-align: center;
     position: absolute;
@@ -321,23 +332,22 @@ margin: 0;
     height: 50px;
     cursor: pointer;
 }
-.menu-button:hover span{
+.burger-menu__button:hover span{
     background-color: rgb(0, 0, 0);
 }
-.menu-button:hover span::after{
+.burger-menu__button:hover span::after{
     background-color: rgb(0, 0, 0)
 }
-.menu-button:hover span::before{
+.burger-menu__button:hover span::before{
     background-color: rgb(0, 0, 0)
 }
-.menu-button>span{
+.burger-menu__button>span{
     top: 24px;
-    
 }
 
-.menu-button>span,
-.menu-button>span:after,
-.menu-button>span:before{
+.burger-menu__button>span,
+.burger-menu__button>span:after,
+.burger-menu__button>span:before{
     display: block;
     position: absolute;
     width: 100%;
@@ -346,12 +356,12 @@ margin: 0;
     transition-duration: 0.2s;
 }
 
-.menu-button>span:after{
+.burger-menu__button>span:after{
     content: "";
     top: -15px;
 }
 
-.menu-button>span:before{
+.burger-menu__button>span:before{
     content: "";
     top: 15px;
 }
@@ -360,4 +370,6 @@ margin: 0;
     position:absolute;    
     left: 30px;
     opacity: 0;
+    width: 0;
+    height: 0;
 }
