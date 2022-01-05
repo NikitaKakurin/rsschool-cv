@@ -76,6 +76,10 @@
         align-items: center;
     }
 
+    .aside{
+        min-width: 40%;
+    }
+
 }
 
 @media (max-width: 850px) {
@@ -122,6 +126,10 @@
         font-size: 12px;
     }
 
+    .hobbies__item{
+        width: 50px;
+    }
+
     .details-container{
         flex-direction: column;
         gap: 20px;
@@ -136,9 +144,7 @@
         align-items: center;
     }
 
-    .hobbies__item{
-        width: 50px;
-    }
+
 }
 
 @media (max-width: 500px) {
