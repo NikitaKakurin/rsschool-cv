@@ -1,4 +1,11 @@
-"use strict"
+import './css/normalize.css';
+import './css/style.css';
+import './highlight/default.min.css';
+import './css/media.css';
+
+import hljs from './highlight/highlight.min.js'
+
+
 hljs.highlightAll();
 const checkbox =document.getElementById("toggle-menu");
 const menu = document.querySelector(".menu__list");

@@ -193,9 +193,12 @@ h3{
     justify-content: center;
     text-align: center;
 }
+
 .hobbies__item{
     width: 75px;
 }
+
+
 
 .article-container{
     background-color: rgba(255, 255, 255, 0.7);
