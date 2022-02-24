@@ -217,11 +217,14 @@ h3{
 .my-projects__container_img{
     position: relative;
     max-width: 800px;
+    height: 391px;
+    overflow: hidden;
 }
 
 .my-projects__img{
     display: block;
     width: 100%;
+
 }
 
 .my-projects__text{
