@@ -2,11 +2,13 @@ import './css/normalize.css';
 import './css/style.css';
 import './highlight/default.min.css';
 import './css/media.css';
+import './css/demo.scss';
 
 import hljs from './highlight/highlight.min.js'
-
+import animateDemo from './js/demo.js'
 
 hljs.highlightAll();
+const inputAnimation=document.querySelector(".code__demo-value")
 const checkbox =document.getElementById("toggle-menu");
 const menu = document.querySelector(".menu__list");
 const menuButton = document.querySelector(".burger-menu__button");
@@ -57,6 +59,17 @@ function handleClick(event){
 }
 
 
+let animateValue = 495
+animateDemo(animateValue);
+let intervalAnimateDemo = setInterval(animateDemo,20000,animateValue);
+
+function SetAnimateDemo(event){
+    clearInterval(intervalAnimateDemo)
+    animateDemo(+event.target.value);
+    intervalAnimateDemo = setInterval(animateDemo,20000,+event.target.value);
+}
+
+inputAnimation.addEventListener('change', SetAnimateDemo)
 checkbox.addEventListener("change",menuToDisplay);
 document.addEventListener("click", handleClick);
 
