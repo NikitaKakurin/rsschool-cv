@@ -14,7 +14,7 @@ function animateDemo(value){
     const arrFromValue = strFromValue.split('').join(',').split('');
     let elemArr = []
     elemArr.push(createOneElement('span',['code__demo-brackets','code__demo-brackets-left'],`[`));
-    elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-big'],`"`));
+    elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-hide'],`"`));
     const delay = 700*strFromValue.length;
 
     arrFromValue.forEach((str, index) => {
@@ -22,12 +22,12 @@ function animateDemo(value){
             let elem = createOneElement('span',['code__demo-comma','code__demo-comma-invisible'],str)
             elemArr.push(elem); 
         }else if(Number.isInteger(+str)){
-            elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-big'],`"`))
+            elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-hide'],`"`))
             elemArr.push(createOneElement('span','code__demo-digit',str));
-            elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-big'],`"`))
+            elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-hide'],`"`))
         }
     });
-    elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-big'],`"`));
+    elemArr.push(createOneElement('span',['code__demo-quotes','code__demo-quotes-hide'],`"`));
     elemArr.push(createOneElement('span',['code__demo-brackets','code__demo-brackets-right'],`]`));
 
 
@@ -62,12 +62,12 @@ function animateDemo(value){
 
     
     function animateExpression(parent){
-        const arrayQuotes = parent.querySelectorAll('.code__demo-quotes-big');
+        const arrayQuotes = parent.querySelectorAll('.code__demo-quotes-hide');
         const arrayBrackets = parent.querySelectorAll('.code__demo-brackets');
         const arrayCommas = parent.querySelectorAll('.code__demo-comma');
         
         arrayQuotes.forEach((elem,index)=>{
-            arrayTimeout.push(setTimeout(()=>elem.classList.remove('code__demo-quotes-big'),200*(index+1)));
+            arrayTimeout.push(setTimeout(()=>elem.classList.remove('code__demo-quotes-hide'),200*(index+1)));
         });
 
         arrayBrackets.forEach((elem,index)=>{
@@ -102,6 +102,7 @@ function animateDemo(value){
 
     function powValue(parent){
         demoProgress.innerHTML += `<span>.<span class="code__demo-red">map</span>(function(x){return x*x;})</span>`;
+        const arrayQuotes = parent.querySelectorAll('.code__demo-quotes');
         const digitsArr = parent.querySelectorAll('.code__demo-digit');
         digitsArr.forEach((digit, index)=>{
             let value = digit.innerText;
@@ -110,39 +111,40 @@ function animateDemo(value){
             },400*(index)));
             arrayTimeout.push(setTimeout(()=>{
                 digit.innerText = `${value*value}`;
-                
+                arrayQuotes.forEach((elem,index)=>{
+                    arrayTimeout.push(setTimeout(()=>elem.classList.add('code__demo-quotes-hide'),200*(index)));
+                });
             },delay * 2))
         })
         arrayTimeout.push(setTimeout(()=>{hideElem(demo)},delay*3));
     }
+    
 
     function hideElem(parent){
         demoProgress.innerHTML += `<span>.<span class="code__demo-red">join</span>()</span>`;
         const arrayQuotes = parent.querySelectorAll('.code__demo-quotes');
         const arrayCommas = parent.querySelectorAll('.code__demo-comma');
         const arrayBrackets = parent.querySelectorAll('.code__demo-brackets');
-        arrayQuotes.forEach((elem,index)=>{
-            arrayTimeout.push(setTimeout(()=>elem.classList.add('code__demo-quotes-big'),200*(index+1)));
-        });
+
 
         arrayCommas.forEach((elem,index)=>{
             arrayTimeout.push(setTimeout(()=>elem.classList.add('code__demo-comma-invisible'),400*(index+1)));
         });
 
         arrayBrackets.forEach((elem)=>{
-            elem.classList.add('code__demo-quotes-big');
+            elem.classList.add('code__demo-quotes-hide');
             elem.addEventListener('transitionend',showQuotes);
             function showQuotes(){
                 elem.removeEventListener('transitionend',showQuotes);
                 elem.innerText=`"`;
-                elem.classList.remove('code__demo-quotes-big');
+                elem.classList.remove('code__demo-quotes-hide');
             }
         });
 
         arrayTimeout.push(setTimeout(()=>{
             demoProgress.innerHTML = `<span><span class="code__demo-red">squareDigits</span>(${value})-></span><span> + ${value}.<span class="code__demo-red">toString</span>()</span><span>.<span class="code__demo-red">split</span>(<span class="code__demo-red">''</span>)</span><span>.<span class="code__demo-red">map</span>(function(x){return x*x;})</span><span>.<span class="code__demo-red">join</span>()</span>`;
             arrayBrackets.forEach((elem)=>{
-                elem.classList.add('code__demo-quotes-big')
+                elem.classList.add('code__demo-quotes-hide')
             })
         },delay*2))
     }
