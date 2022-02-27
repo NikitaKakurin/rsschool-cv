@@ -24,13 +24,12 @@ function menuToDisplay(e){
 }
 
 function showMenu(){
-    menu.style.height = "300px"
-    menu.style.display = "flex";
+    menu.style.top = "50px";
 }
 
 function hideMenu(){
-    menu.style.height = "0px"
-    menu.style.display = "none";
+    menu.style.top = "-300px";
+    
 }
 
 window.onresize = function(event){

@@ -50,6 +50,7 @@ h3{
     background: linear-gradient(rgba(3, 56, 244, .71), rgba(175, 24, 160, 0.79));
     min-height: 100vh;
     box-shadow: rgba(3, 5, 6, .5)  20px 0 20px, rgba(3, 5, 6, .5)  -20px 0 20px;
+    overflow: hidden;
 }
 .menu{
     max-width: 1440px;
@@ -80,7 +81,7 @@ h3{
     margin: 0;
     padding: 20px;
     list-style: none;
-    
+    transition: height 0.5s;
 }
 .contacts__link,
 .example__link,
