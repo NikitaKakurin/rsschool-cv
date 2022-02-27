@@ -124,6 +124,24 @@
 }
 
 
+@media (max-width: 768px) {
+    .my-projects__container_img{
+        position: static;
+        max-height: auto;
+        overflow: none;
+    }
+       
+    .my-projects__text{
+        position: static;
+        width: 100%;
+        height: auto;
+        line-height: 2.25rem;
+        font-size: 1.5rem;
+        opacity: 1;
+        transition: none;
+    }
+}
+
 @media (max-width: 620px) {
     html{
         font-size: 12px;
@@ -152,6 +170,10 @@
 
 @media (max-width: 500px) {
 
+    .my-projects__text{
+        line-height: 1.5rem;
+        font-size: 1rem;
+    }
 
     .logo{
         flex-direction: column;
