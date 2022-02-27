@@ -266,29 +266,33 @@ h3{
 
 
 
-.svg-text text{
-    font-size: 10px;
+
+
+
+.svg-logo__html5{
+    transform: translate(23%,28%) ;
 }
 
-.svg-text {
-    transform: translate(-28%,3px) ;
+.svg-logo__css3{
+    transform: translate(23%,28%) ;
 }
 
-.svg-text__css3{
-    transform: translateX(6%) 
+.svg-logo__js{
+    transform: translate(25%,25%) ;
 }
 
-.svg-text__js{
-    transform: translateX(16%) 
+.svg-logo__git{
+    transform: translate(15%,15%) ;
 }
 
-.svg-text__git{
-    transform: translateX(11%) 
+.svg-logo__python{
+    transform: translate(20%,20%) ;
 }
 
-.svg-text__python{
-    transform: translateX(-5%);
+.svg-logo__webpack{
+    transform: translate(20%,20%) ;
 }
+
 
 .skills__list{
     display: flex;
