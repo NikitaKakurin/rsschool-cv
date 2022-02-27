@@ -14,10 +14,11 @@
     html{
         font-size: 16px;
     }
-
+    .menu__nav,
     .menu{
-        margin-bottom: 50px;
+        height: 50px;
     }
+
 
     .menu__list{
         position: fixed;
