@@ -21,34 +21,39 @@
 
             <ul class = "menu__list">
                 <li class = "menu__item">
-                    <a href="#personal-details" class="menu__link">contacts</a>
+                    <a href="#personal-details" class="menu__link" data-lang="contactsLink">contacts</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#about" class="menu__link">about me</a>
+                    <a href="#about" class="menu__link" data-lang="aboutLink">about me</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#education" class="menu__link">education</a>
+                    <a href="#education" class="menu__link" data-lang="educationLink">education</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#skills" class="menu__link">skills</a>
+                    <a href="#skills" class="menu__link" data-lang="skillsLink">skills</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#languages" class="menu__link">languages</a>
+                    <a href="#languages" class="menu__link" data-lang="languagesLink">languages</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#example" class="menu__link">my projects</a>
+                    <a href="#example" class="menu__link" data-lang="projectsLink">my projects</a>
                 </li>
                 <li class = "menu__item">
-                    <a href="#hobbies" class="menu__link">hobby</a>
+                    <a href="#hobbies" class="menu__link" data-lang="hobbyLink">hobby</a>
                 </li>
             </ul>
             <div class="lang-switcher">
               <label class="lang__label" for="lang-en">
                   <span class="lang__text-en">EN</span>
+                  
               </label>
-              <input class="lang__radio-en" type="radio" name="lang" id="lang-en" checked>
-              <div class="switcher-toggle"></div>
-              <input class="lang__radio-ru" type="radio" name="lang" id="lang-ru">
+
+              <div class="switcher-toggle">
+                <input class="lang__radio-en" type="radio" name="lang" id="lang-en" checked>
+                <input class="lang__radio-ru" type="radio" name="lang" id="lang-ru">
+                <div class="switcher-handle"></div>
+              </div>
+              
               <label class="lang__label" for="lang-ru">
                 <span class="lang__text-ru">RU</span>
               </label>
@@ -60,25 +65,25 @@
             <header class="logo">
                 <img src="./assets/images/me.jpg" alt="my photo" class ="logo__img" width="150" height="150">
                 <div class="logo__container">
-                    <h1>Nikita<br>Kakurin</h1>
+                    <h1 data-lang="name">Nikita<br data-lang="surname">Kakurin</h1>
                     <h2 class = "logo__specialty">front-end developer</h2>
                 </div>
             </header>
             
           <div class="details-container">
             <section class="personal-details">
-              <h2 id="personal-details" >Personal details:</h2>
+              <h2 id="personal-details" data-lang="Details">Personal details:</h2>
               <ul class="personal-details__list">
                   <li class="personal-details__item"><img src="./assets/svg/cake_white_24dp.svg" alt="Birthday"> Date of Birth: 08.09.1987;</li>
-                  <li class="personal-details__item">Marital status: married;</li>
+                  <li class="personal-details__item" data-lang="Marital">Marital status: married;</li>
               </ul>
             </section>
 
             <section class = "contacts-container">
-              <h2>Contacts:</h2>
+              <h2 data-lang="contacts">Contacts:</h2>
               <address class = "contacts">
                 <ul class = "contacts__list">
-                  <li class = "contacts__item"><img src="./assets/svg/cottage_white_24dp.svg" alt="address">  Voronezh, Russia;</li>
+                  <li class = "contacts__item"><img src="./assets/svg/cottage_white_24dp.svg" alt="address" data-lang="address">  Voronezh, Russia;</li>
                   <li class = "contacts__item"><img src="./assets/svg/call_white_24dp.svg" alt="call"> <a class="contacts__link" href="tel:+79515614387">+7(951)-561-43-87;</a></li>
                   <li class = "contacts__item"><img src="./assets/svg/email_white_24dp.svg" alt="email"> <a class="contacts__link" href="mailto:KakurinN.V@yandex.ru">KakurinN.V@yandex.ru;</a></li>
                   <li class = "contacts__item contacts__item-white"><img src="./assets/svg/github-brands.svg" alt = "github" width="24"> <a class="contacts__link" href="https://github.com/NikitaKakurin">NikitaKakurin;</a></li>
@@ -87,22 +92,22 @@
             </section>
           </div>
           <section class="language">
-              <h2 id="languages">Languages:</h2>
+              <h2 id="languages" data-lang="languages">Languages:</h2>
               <ul class="language__list">
-                  <li class="language__item">English (level: pre-intermediate)</li>
-                  <li class="language__item">Russian</li>
+                  <li class="language__item" data-lang="langEn">English (level: pre-intermediate)</li>
+                  <li class="language__item" data-lang="langRu">Russian</li>
               </ul>
           </section>
           <section class="hobbies">
-              <h2 id="hobbies">Hobbies:</h2>
+              <h2 id="hobbies" data-lang="hobbies">Hobbies:</h2>
               <div class="hobbies__container">
                   <figure >
                     <img src="./assets/svg/open-book-top-view-svgrepo-com.svg" alt="read books"  class="hobbies__item hobbies__item-white">
-                    <figcaption>read books</figcaption>
+                    <figcaption data-lang="read">read books</figcaption>
                   </figure>
                   <figure >
                     <img src="./assets/svg/chess-solid.svg" alt="play chess"  class="hobbies__item hobbies__item-white">
-                    <figcaption>play chess</figcaption>
+                    <figcaption data-lang="play">play chess</figcaption>
                   </figure>
                   <figure >
                     <img src="./assets/svg/codewars_logo_icon_145389.svg" alt="codewars"  class="hobbies__item hobbies__item-white">
@@ -114,26 +119,28 @@
         <div class = "article-container">
             <div class="article">
                 <section class="about">
-                  <h3 id="about">About me:</h3>
-                  <p class="about__text text"> Hi, I am currently working as an electrical engineer. 
-                      I have a higher education in automation of production systems.
-                       but I really want to become a frontend developer. I started learning programming many times, 
-                       but for a number of life reasons, I temporarily stopped studying, 
-                       but the desire to learn does not leave me. I hope that this time I will be able to get a job.
+                  <h3 id="about" data-lang="aboutTitle">About me:</h3>
+                  <p class="about__text text" data-lang="aboutText"> Hi, I am currently working as an electrical engineer.
+                     I have a higher education in the field of automation of production systems,
+                      but I really want to become a frontend developer.
+                       I started studying programming many times, 
+                       but for a number of life reasons I temporarily stopped studying,
+                        but the desire to learn does not leave me. 
+                        Now I am ready to work as frontend developer.
                   </p>
                 </section>
 
                 <section class = "example">
-                  <h3 id="example">Example of my code:</h3> 
+                  <h3 id="example" data-lang="exampleTitle">Example of my code:</h3> 
                   <ul class="example__list">
-                    <li>I have old profile of codewars which I used in 2016-2017 <a href="https://www.codewars.com/users/NikitaKakurinOLD" target ="blank" class="example__link">NikitaKakurinOLD</a></li>
-                    <li>I started a new profile for rsschool course <a href="https://www.codewars.com/users/NikitaKakurin" target ="blank" class="example__link">NikitaKakurin</a>;</li>
-                    <li>short example of my code from <a href="https://www.codewars.com/kata/546e2562b03326a88e000020" target ="blank" class="example__link">Codewars</a>:<br>
-                      <p>function which returns square every digit:</p>
+                    <li><span data-lang="codewarsOld">I have old profile of codewars which I used in 2016-2017 </span><a href="https://www.codewars.com/users/NikitaKakurinOLD" target ="blank" class="example__link">NikitaKakurinOLD</a></li>
+                    <li><span data-lang="codewarsNew">started a new profile for rsschool course </span><a href="https://www.codewars.com/users/NikitaKakurin" target ="blank" class="example__link">NikitaKakurin</a>;</li>
+                    <li><span data-lang="shortExample">short example of my code from </span><a href="https://www.codewars.com/kata/546e2562b03326a88e000020" target ="blank" class="example__link">Codewars</a>:<br></li>
+                      <p data-lang="functionDescription">function which returns square every digit:</p>
                       <div class="code__demo">
-                        <h2 class="code__demo-title">Demo:</h2>
+                        <h2 class="code__demo-title" data-lang="demoTitle">Demo:</h2>
                         <div>
-                          <span>Please input value from 0 to 999</span>
+                          <span data-lang="please">Please input value from 0 to 999</span>
                           <input class = "code__demo-value" type="number" max="999" min="0" placeholder="number" >
                         </div>
                         <div class="code__demo-function"></div> 
@@ -149,16 +156,16 @@ function squareDigits(num){
                     </li>
 
 
-                    <li> <p>My projects:</p> 
+                    <li> <p data-lang="projectsTitle">My projects:</p> 
                       <div class="my-projects">
                         
                         <a href="https://nikitakakurin-portfolio1.netlify.app/" target="blank" class = "my-projects__link">
                           <figure class = "my-projects__container_img">
                             <img src="./assets/images/screenshotPortfolio.PNG" alt="portfolio"  class = "my-projects__img">
                             <figcaption class = "my-projects__text">
-                              <span>Site "Portfolio"</span>
-                              <span>Mobile, desktop</span>
-                              <span>HTML, CSS3, JS</span>
+                              <span data-lang="portfolioName">Site "Portfolio"</span>
+                              <span data-lang="portfolioSystem">Mobile, desktop</span>
+                              <span data-lang="portfolioSkills">HTML, CSS3, JS</span>
                             </figcaption>
                           </figure>
                         </a>
@@ -167,9 +174,9 @@ function squareDigits(num){
                           <figure class = "my-projects__container_img">
                             <img src="./assets/images/screenshot2048.PNG" alt="game 2048"  class = "my-projects__img">
                             <figcaption class = "my-projects__text">
-                              <span>Game "2048"</span>
-                              <span>Desktop</span>
-                              <span>HTML, CSS3, JS</span> 
+                              <span data-lang="2048Name">Game "2048"</span>
+                              <span data-lang="2048System">Desktop</span>
+                              <span data-lang="2048Skills">HTML, SCSS, JS</span> 
                             </figcaption>
                           </figure>
                         </a>
@@ -177,9 +184,10 @@ function squareDigits(num){
                         <a href="https://nikitakakurin-movie-app.netlify.app" target="blank" class = "my-projects__link">
                           <figure class = "my-projects__container_img">
                             <img src="./assets/images/screenshotMovie-app.PNG" alt="site movie-app"  class = "my-projects__img">
-                            <figcaption class = "my-projects__text"><span>Site "Movie-app"</span>
-                              <span>Mobile, desktop</span>
-                              <span>HTML, CSS3, JS</span> 
+                            <figcaption class = "my-projects__text">
+                              <span data-lang="movieAppName">Site "Movie-app"</span>
+                              <span data-lang="movieAppSystem">Mobile, desktop</span>
+                              <span data-lang="movieAppSkills">HTML, CSS3, JS</span> 
                             </figcaption>
                           </figure>
                         </a>
@@ -187,9 +195,10 @@ function squareDigits(num){
                         <a href="https://nikitakakurin-eco-sounds.netlify.app" target="blank" class = "my-projects__link">
                           <figure class = "my-projects__container_img">
                             <img src="./assets/images/screenshotEco-sounds.PNG" alt="site movie-app"  class = "my-projects__img">
-                            <figcaption class = "my-projects__text"><span>Site "Eco-sounds"</span>
-                              <span>Desktop</span>
-                              <span>HTML, CSS3, JS</span>
+                            <figcaption class = "my-projects__text">
+                              <span data-lang="ecoName">Site "Eco-sounds"</span>
+                              <span data-lang="ecoSystem">Desktop</span>
+                              <span data-lang="ecoSkills">HTML, SCSS, JS</span>
                             </figcaption>
                           </figure>
                         </a>
@@ -198,9 +207,9 @@ function squareDigits(num){
                           <figure class = "my-projects__container_img">
                             <img src="./assets/images/drumkitForCV.png" alt="drum-kit"  class = "my-projects__img">
                             <figcaption class = "my-projects__text">
-                              <span>Music app "Drum-kit"</span>
-                              <span>Desktop</span>
-                              <span>HTML5, CSS3, JS</span>
+                              <span data-lang="drumName">Music app "Drum-kit"</span>
+                              <span data-lang="drumSystem">Desktop</span>
+                              <span data-lang="drumSkills">HTML5, CSS3, JS</span>
                             </figcaption>
 
                           </figure>
@@ -212,18 +221,20 @@ function squareDigits(num){
                 </section>
   
                 <section class="experience">
-                  <h3>Professional experience:</h3> 
-                  <p>I still have a small one, once I made a simple game in canvas, and several times simple sites based on a template.</p>
+                  <h3 data-lang="experienceTitle">Professional experience:</h3> 
+                  <p data-lang="experienceText">I have a some experience, once I made a simple game in canvas, and several times simple sites based on a template.</p>
                 </section>
 
                 <section>
-                  <h3 id="education">Education:</h3> 
-                    <p>2004-2009: Ukraine, Alchevsk, Donbass State Technical University - Electronic Engineering Engineer.</p> 
+                  <h3 id="education" data-lang="educationTitle">Education:</h3> 
+                    <p data-lang="educationUniversity">2004-2009: Ukraine, Alchevsk, Donbass State Technical University - Electronic Engineering Engineer.</p> 
                     <p>2021: RSSchool JS/FE Pre-School(javascript)</p>
+                    <p>2021: RSSchool JS/FE stage1</p>
+                    <p>2022: RSSchool JS/FE Pre-School(javascript)</p>
                 </section>
    
                 <section class = skills>
-                    <h3 id="skills">skills:</h3>
+                    <h3 id="skills" data-lang="skillsTitle">skills:</h3>
                     <ul class = skills__list>
                       
                       <li class = skills__item>
