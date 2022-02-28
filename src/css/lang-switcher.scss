@@ -1,0 +1,75 @@
+.lang-switcher{
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 5px;
+    z-index: 1000;
+}
+
+.lang__label{
+    text-align: center;
+    cursor: pointer;
+}
+
+.lang__radio-en,
+.lang__radio-ru{
+    position: absolute;
+    top:0px;
+    width: 20px;
+    height: 20px;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.lang__radio-en{
+    left: 27px;
+}
+
+.lang__radio-ru{
+    right: 27px;
+}
+
+.lang__text-en,
+.lang__text-ru{
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    color:aliceblue;
+    cursor: pointer;
+    transition: text-shadow 0.5s;
+}
+
+.lang__text-en:hover,
+.lang__text-ru:hover{
+    text-shadow: 0 0 1px #FFF,
+                0 0 2px #FFF,
+                0 0 3px #FFF,
+}
+
+.switcher-toggle{
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(240, 227, 109);
+    border-radius: 10px;
+    cursor: pointer;
+};
+
+.switcher-toggle::after{
+    position: absolute;
+    top:0;
+    left: 20px;
+    content:"";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(228, 127, 12);
+    cursor: pointer;
+    transition: left 0.4s;
+
+}
+
+.lang__radio-en:checked + .switcher-toggle::after{
+    left: 0;
+}

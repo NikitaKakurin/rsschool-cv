@@ -1,16 +1,10 @@
 @media (max-width: 1350px) {
     .menu__list{
-        width: 90%;
-    }
-}
-
-@media (max-width: 1200px) {
-    .menu__list{
         width: 100%;
     }
 }
 
-@media (max-width: 1070px) {
+@media (max-width: 1230px) {
     html{
         font-size: 16px;
     }

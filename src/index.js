@@ -3,6 +3,7 @@ import './css/style.css';
 import './highlight/default.min.css';
 import './css/media.css';
 import './css/demo.scss';
+import './css/lang-switcher.scss';
 
 import hljs from './highlight/highlight.min.js'
 import animateDemo from './js/demo.js'
