@@ -131,6 +131,7 @@ h3{
     background-color: #000000;
     width: 2rem;
 }
+
 .contacts__link:hover::after,
 .example__link:hover::after,
 .menu__link:hover::after{
@@ -174,6 +175,7 @@ h3{
 
 .details-container,
 .language,
+.certificates,
 .hobbies{
     margin-bottom: 10px;
     padding: 10px 15px;
@@ -206,7 +208,7 @@ h3{
     filter: invert(100%);
 }
 
-
+.certificates__container,
 .hobbies__container{
     display: flex;
     flex-direction: column;
@@ -218,6 +220,23 @@ h3{
     width: 75px;
 }
 
+.certificates__item{
+    width: 200px;
+    height: 141px;
+    cursor: pointer;
+    transition: transform .5s;
+} 
+
+.certificates__item-link{
+    display: inline-block;
+    width: 200px;
+    height: 141px;
+    overflow: hidden;
+}
+
+.certificates__item:hover{
+    transform: scale(1.2);
+}
 
 
 .article-container{
