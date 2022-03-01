@@ -7,6 +7,7 @@ import './css/lang-switcher.scss';
 
 import hljs from './highlight/highlight.min.js'
 import animateDemo from './js/demo.js'
+import changeLanguage from './js/i18n';
 
 hljs.highlightAll();
 const inputAnimation=document.querySelector(".code__demo-value")
@@ -15,6 +16,19 @@ const menu = document.querySelector(".menu__list");
 const menuButton = document.querySelector(".burger-menu__button");
 const burger = document.querySelector(".burger-container")
 
+document.addEventListener('change',handleChange)
+
+function handleChange(event) {
+    let target = event.target;
+    if(target.classList.contains('lang__radio-en')){
+        changeLanguage('en');
+        return;
+    }
+    if(target.classList.contains('lang__radio-ru')){
+        changeLanguage('ru');
+        return;
+    }
+}
 
 function menuToDisplay(e){
     if(checkbox.checked){

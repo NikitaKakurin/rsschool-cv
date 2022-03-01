@@ -20,13 +20,7 @@ const i18Obj = {
         "read":"read books",
         "play":"play chess",
         "aboutTitle":"About me:",
-        "aboutText":`Hi, I am currently working as an electrical engineer.
-                    I have a higher education in the field of automation of production systems,
-                    but I really want to become a frontend developer.
-                    I started studying programming many times, 
-                    but for a number of life reasons I temporarily stopped studying,
-                    but the desire to learn does not leave me. 
-                    Now I am ready to work as frontend developer.`,
+        "aboutText":`Hi, I am currently working as an electrical engineer. I have a higher education in the field of automation of production systems, but I really want to become a frontend developer. I started studying programming many times, but for a number of life reasons I temporarily stopped studying, but the desire to learn does not leave me. Now I am ready to work as frontend developer.`,
         "exampleTitle":"Example of my code:",
         "codewarsOld":"I have old profile of codewars which I used in 2016-2017 ",
         "codewarsNew": "started a new profile for rsschool course ",
@@ -66,7 +60,7 @@ const i18Obj = {
         "projectsLink": "мои проекты",
         "hobbyLink":"хобби",
         "name":"Никита",
-        "surname": "Какурина",
+        "surname": "Какурин",
         "details":"Персональные данные:",
         "Marital":"Семейное положение: женат;",
         "contactsTitle":"Контакты:",
@@ -78,13 +72,7 @@ const i18Obj = {
         "read":"читать книги",
         "play":"шахматы",
         "aboutTitle":"Обо мне:",
-        "aboutText":`Привет, в настоящее время я работаю инженером-электриком.
-                    У меня высшее образование в области автоматизации производственных систем,
-                    но я действительно хочу стать фронтенд-разработчиком.
-                    Я много раз начинал изучать программирование,
-                    но по ряду жизненных причин временно прекращал учебу,
-                    но желание учиться меня не покидает.
-                    Теперь я готов работать фронтенд-разработчиком.`,
+        "aboutText":`Привет, в настоящее время я работаю инженером-электриком. У меня высшее образование в области автоматизации производственных систем, но я действительно хочу стать фронтенд-разработчиком. Я много раз начинал изучать программирование, но по ряду жизненных причин временно прекращал учебу, но желание учиться меня не покидает. Теперь я готов работать фронтенд-разработчиком.`,
         "exampleTitle":"Примеры моего кода:",
         "codewarsOld":"У меня есть старый профиль codewars который я использовал в 2016-2017г. ",
         "codewarsNew": "я начал новый профиль для rsschool курсов ",
@@ -116,3 +104,5 @@ const i18Obj = {
         "author":"Автор: Какурин Никита",
     }
 }
+
+export default i18Obj;
