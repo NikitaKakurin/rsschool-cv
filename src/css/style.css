@@ -52,6 +52,7 @@ h3{
     box-shadow: rgba(3, 5, 6, .5)  20px 0 20px, rgba(3, 5, 6, .5)  -20px 0 20px;
     overflow: hidden;
 }
+/* --------------------------Header start----------------- */
 .menu{
     max-width: 1440px;
     position: relative;
@@ -137,6 +138,32 @@ h3{
 .menu__link:hover::after{
     width: 100%;
 }
+
+.header__btns-container{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.header__print{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url(../assets/svg/printer.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: filter 0.5s;
+}
+
+.header__print:hover{
+    filter: invert(100%);
+}
+/* ---------------------------Header eng--------------------- */
+
+/* ---------------------------Aside start-------------------- */
 
 .aside {
     margin-left: 14px;
@@ -238,6 +265,10 @@ h3{
     transform: scale(1.2);
 }
 
+/* ------------------------Aside end------------------- */
+
+/* ------------------------Article start-------------- */
+
 
 .article-container{
     background-color: rgba(255, 255, 255, 0.7);
@@ -248,28 +279,10 @@ h3{
     font-size: 1.25rem;
     line-height: 2rem;
 }
-
-.article-print{
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin-left: auto;
-    background-image: url(../assets/svg/printer.svg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    cursor: pointer;
-    transition: filter 0.5s;
-}
-
-.article-print:hover{
-    filter: invert(100%);
-}
-
 .text{
     text-indent: 2rem;
 }
-
+/* _____________My projects start____________ */
 .my-projects__container_img{
     position: relative;
     max-width: 800px;
@@ -280,7 +293,6 @@ h3{
 .my-projects__img{
     display: block;
     width: 100%;
-
 }
 
 .my-projects__text{
@@ -304,11 +316,9 @@ h3{
 .my-projects__text:hover{
     opacity: 1;
 }
+/* _____________My projects end____________ */
 
-
-
-
-
+/* _____________Skills start____________ */
 
 .svg-logo__html5{
     transform: translate(23%,28%) ;
@@ -359,7 +369,9 @@ h3{
 .skills-text{
     text-align: center;
 }
+/* _____________Skills end____________ */
 
+/* -------------------------Footer start------------------ */
 .footer-container{
     display: flex;
     justify-content: space-between;
@@ -372,74 +384,4 @@ h3{
 .copyrating{
 text-align: center;
 margin: 0;
-}
-/* .menu{
-    position: relative;
-} */
-.burger-container{
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    background: rgba(3, 56, 244, .71);
-}
-
-.burger-menu{
-    text-align: center;
-    position: relative;
-    width: 50px;
-    height: 50px;
-}
-
-.burger-menu__button{
-    display: flex;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-.burger-menu__button:hover span{
-    background-color: rgb(0, 0, 0);
-}
-.burger-menu__button:hover span::after{
-    background-color: rgb(0, 0, 0)
-}
-.burger-menu__button:hover span::before{
-    background-color: rgb(0, 0, 0)
-}
-.burger-menu__button>span{
-    top: 24px;
-}
-
-.burger-menu__button>span,
-.burger-menu__button>span:after,
-.burger-menu__button>span:before{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: aliceblue;;
-    transition-duration: 0.2s;
-}
-
-.burger-menu__button>span:after{
-    content: "";
-    top: -15px;
-}
-
-.burger-menu__button>span:before{
-    content: "";
-    top: 15px;
-}
-
-#toggle-menu{
-    position:absolute;    
-    left: 30px;
-    opacity: 0;
-    width: 0;
-    height: 0;
 }

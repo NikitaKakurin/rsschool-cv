@@ -5,15 +5,21 @@
 }
 
 @media (max-width: 1230px) {
+
     html{
         font-size: 16px;
     }
+
     .menu__nav,
     .menu{
         height: 50px;
     }
 
-
+    .header__btns-container{
+        position: absolute;
+        z-index: 1000;
+    }
+    
     .menu__list{
         position: fixed;
         left: 0;

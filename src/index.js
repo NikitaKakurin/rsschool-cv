@@ -1,5 +1,6 @@
 import './css/normalize.css';
 import './css/style.css';
+import './css/burger.scss';
 import './highlight/default.min.css';
 import './css/media.css';
 import './css/demo.scss';
@@ -13,7 +14,6 @@ hljs.highlightAll();
 const inputAnimation=document.querySelector(".code__demo-value")
 const checkbox =document.getElementById("toggle-menu");
 const menu = document.querySelector(".menu__list");
-const menuButton = document.querySelector(".burger-menu__button");
 const burger = document.querySelector(".burger-container")
 
 document.addEventListener('change',handleChange)
