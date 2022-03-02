@@ -111,6 +111,7 @@ h3{
     font-family: monserrat,monospace;
     color : #353535
 }
+
 .contacts__link::after,
 .example__link::after,
 .menu__link::after{
@@ -123,6 +124,7 @@ h3{
     height: 2px;
     transition: all .4s;
 }
+
 .contacts__link:after,
 .menu__link::after{
     background-color: aliceblue;

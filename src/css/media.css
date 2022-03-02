@@ -185,7 +185,12 @@
     }
 }
 
-@media (max-width: 375px) {
+
+@media (max-width: 400px) {
+    .certificates__item-wrapper{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
     .hobbies__container figure{
         margin-right: 15px;
