@@ -342,6 +342,10 @@ h3{
     transform: translate(20%,20%) ;
 }
 
+.svg-logo__nodejs{
+    transform: translate(21%,24%) ;
+}
+
 .svg-logo__webpack{
     transform: translate(20%,20%) ;
 }
